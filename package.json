@@ -1,0 +1,22 @@
+{
+  "name": "hp",
+  "version": "1.0.0",
+  "description": "This is json file for assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kha-Tran22/CO3069-Assignment.git"
+  },
+  "author": "HoangTan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kha-Tran22/CO3069-Assignment/issues"
+  },
+  "homepage": "https://github.com/Kha-Tran22/CO3069-Assignment#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
