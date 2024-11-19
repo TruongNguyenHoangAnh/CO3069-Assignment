@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    width: 80px;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.content .left-panel {
+    flex: 1;
+    background-image: url('../images/bg1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.content .right-panel {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.right-panel p {
+    color: #666;
+    margin: 5px 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group .error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.form-footer {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
