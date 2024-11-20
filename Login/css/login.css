@@ -118,18 +118,53 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: block;
     width: 100%;
     padding: 10px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     background-color: #007BFF;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .btn[disabled] {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+}
+
+.terms-container input[type="checkbox"] {
+    color: #FA4032;
+    margin-right: 10px;
+}
+
+.error {
+    background-color: rgba(255, 138, 138, 0.2);
+    color: #FA4032;
+}
+
+.error-message {
+    display: none;
+    margin-top: 5px;
+    color: #FA4032;
+}
+
+.success-message {
+    color: green;
+    background-color: #d2ffd2;
+    width: 100%;
+    display: none;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

@@ -1,4 +1,4 @@
-var container = document.getElementById('form');
+var container = document.getElementById('sign-up-form');
 
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -36,22 +36,32 @@ document.getElementById("sign-up-form").addEventListener("submit", function(even
       email.classList.remove("error");
   }
 
-  if (password === "") {
+  if (password === "" || confirmPassword === "") {
       passwordBlank.style.display = "inline";
       passwordError.style.display = "inline";
       document.getElementById("password").classList.add("error");
       document.getElementById("confirm-password").classList.add("error");
       isValid = false;
   }
-  else if (password !== confirmPassword) {
+  else if (password.trim().length < 8) {
+      passwordBlank.textContent = "Password must be at least 8 characters!";
+      passwordBlank.style.display = "inline";
+      document.getElementById("password").classList.add("error");
+      isValid = false;
+  }
+  else if (password !== confirmPassword && password.trim().length >= 8) {
       // Hiển thị lỗi nếu mật khẩu không khớp
       passwordError.style.display = "inline";
+      passwordBlank.style.display = "none";
       document.getElementById("confirm-password").classList.add("error");
+      document.getElementById("password").classList.remove("error");
       isValid = false;
   } else {
       // Ẩn lỗi và tiếp tục xử lý
       passwordError.style.display = "none";
+      passwordBlank.style.display = "none";
       document.getElementById("confirm-password").classList.remove("error");
+      document.getElementById("password").classList.remove("error");
   }
 
   if (!agreeTerms) {
@@ -66,5 +76,8 @@ document.getElementById("sign-up-form").addEventListener("submit", function(even
   }
   else {
       alert("Register successfully!");
+      setTimeout(function() {
+        window.location.href = "home.html"; // Thay "/user" bằng đường dẫn trang user của bạn
+      }, 700);
   }
 });
