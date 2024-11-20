@@ -17,28 +17,34 @@
     <div class="content">
         <div class="left-panel"></div>
         <div class="right-panel">
-            <h1>Sign Up</h1>
+            <h1>Sign up</h1>
             <p>Sign up for free to start</p>
-            <form>
+            <form id="sign-up-form" action="" method="post">
+                <p class="success-register"></p>
+                <div id="successMessage" class="success-message">
+                    Registered successfully!
+                </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" placeholder="Enter your email">
-                    <span class="error-message">Error message</span>
+                    <input type="email" id="email" placeholder="Enter your HCMUT email">
+                    <span id="emailError" class="error-message">Email must have the format @hcmut.edu.vn!</span>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Use 8 or more characters with a mix of letters, numbers & symbols">
+                    <span id="passwordBlank" class="error-message">Password cannot be blank!</span>
                 </div>
                 <div class="form-group">
                     <label for="confirm-password">Confirm password</label>
                     <input type="password" id="confirm-password" placeholder="Re-enter your password">
-                    <span class="error-message">Incorrect password</span>
+                    <span id="passwordError" class="error-message">Password is incorrect! Please try again.</span>
                 </div>
-                <div class="form-group">
-                    <input type="checkbox" id="terms">
-                    <label for="terms">Agree to our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></label>
+                <div class="terms-container">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms">
+                    <label for="agreeTerms">Agree to our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></label>
+                    <span id="termsError" class="error-message"></span>
                 </div>
-                <button type="submit" class="btn" disabled>Sign up</button>
+                <button type="submit" class="btn">Sign up</button>
             </form>
             <div class="form-footer">
                 Already have an account? <a href="login.html">Log in</a>
@@ -46,4 +52,5 @@
         </div>
     </div>
 </body>
+<script src="js/signup.js"></script>
 </html>
